@@ -5,7 +5,7 @@
     </div>
     <div class="panel-body">
         <div class="row-fluid">
-            <form id="sign_form" action="<?php echo site_url('Material/addNew'); ?>" method="post" enctype="multipart/form-data">
+            <form id="sign_form" action="<?php echo site_url('mate/addNew'); ?>" method="post" enctype="multipart/form-data">
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane active in" id="home">
 
@@ -13,7 +13,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <lable>unique_code</lable>
-                                    <input type="text" class="form-control input-group-sm" name="unique_code" id="" readonly="readonly"  value="<?php echo $unique_code['unique_code']; ?>">
+                                    <input type="text" class="form-control input-group-sm" name="unique_code" id="" readonly="readonly"  value="<?php echo $unique_code; ?>">
                                 </div>
                             </div>
 

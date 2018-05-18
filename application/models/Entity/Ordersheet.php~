@@ -1,0 +1,43 @@
+<?php
+namespace Entity;
+use Entity\Repository\OrdersheetRepository;
+
+/**
+ * Ordersheet
+ *
+ * @Table(name="ordersheet", options={"collate"="utf8_general_ci","charset"="utf8"})
+ * @Entity(repositoryClass="Entity\Repository\OrdersheetRepository")
+ */
+class Ordersheet{
+
+    /**
+     * @var integer
+     *
+     * @Column(name="order_id", type="integer", nullable=false, options={"comment": "订单id"})
+     * @Id
+     * @GeneratedValue(strategy="AUTO")
+     */
+    private $orderId;
+
+    /**
+     * @var integer
+     *
+     * @Column(name="material_id", type="integer", nullable=false, options={"comment": "材料id"})
+     * @Id
+     * @GeneratedValue(strategy="NONE")
+     */
+    private $materialId;
+
+    /**
+     * @var integer
+     *
+     * @Column(name="need_num", type="integer", nullable=false, options={"comment": "需求量"})
+     */
+    private $needNum;
+
+    public function __construct()
+    {
+
+    }
+
+}

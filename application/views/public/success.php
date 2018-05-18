@@ -52,13 +52,13 @@
   <body class=""> 
   <!--<![endif]-->
     
-    <?php $url=isset($url) ? $url: site_url('material/query'); ?>
+    <?php $url=isset($url) ? $url: site_url('mate/query'); ?>
     <div class="row-fluid">
         <div class="http-error">
             <h1><?php echo isset($title) ? $title : 'Success!'; ?> </h1>
             <p class="info"><?php echo isset($content) ? $content : ''; ?></p>
             <p><i class="icon-home"></i></p>
-            <p><a href="http://www.liu-gan.top/xiaoguo/material/index.php/Material/query">GetBack</a></p>
+            <p><a href="http://www.liu-gan.top/xiaoguo/material/index.php/Mate/query">GetBack</a></p>
            <!--  <p><button type="button" class="btn btn-primary" onclick="javascript:history.back(-1);" >返回</button></p> -->
             <p>
                 <?php if(isset($time)): ?>

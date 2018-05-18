@@ -97,4 +97,14 @@ class UserGroup
         return $this->users;
     }
 
+
+    /**
+     * Remove user
+     *
+     * @param \Entity\User $user
+     */
+    public function removeUser(\Entity\User $user)
+    {
+        $this->users->removeElement($user);
+    }
 }

@@ -86,7 +86,7 @@
         <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>Menu</a>
         <ul id="dashboard-menu" class="nav nav-list collapse in">
 
-            <li ><a href="<?php echo site_url('material/query');  ?>">material</a></li>
+            <li ><a href="<?php echo site_url('mate/query');  ?>">material</a></li>
             <li ><a href="<?php echo site_url('product/query');  ?>">product</a></li>
             <li ><a href="<?php echo site_url('order/query');  ?>">order</a></li>
         </ul>

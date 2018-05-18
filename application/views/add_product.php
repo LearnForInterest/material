@@ -13,7 +13,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <lable>product_id</lable>
-                                    <input type="text" class="form-control input-group-sm" name="product_id" id="" readonly="readonly"  value="<?php echo $product_id['new_pid']; ?>">
+                                    <input type="text" class="form-control input-group-sm" name="product_id" id="" readonly="readonly"  value="<?php echo $product_id; ?>">
                                 </div>
                             </div>
 

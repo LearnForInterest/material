@@ -58,7 +58,7 @@
 
         <h1><?php echo isset($title) ? $title : 'something wrong！'; ?></h1>
         <p><i class="icon-home"></i></p>
-        <p><a href="http://www.liu-gan.top/xiaoguo/material/index.php/Material/query">GetBack</a></p>
+        <p><a href="http://www.liu-gan.top/xiaoguo/material/index.php/Mate/query">GetBack</a></p>
     </div>
 </div>
 

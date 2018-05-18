@@ -7,7 +7,7 @@
             Material OverAll View
             <div class="my_right">
                 <button type="button" class="btn btn-primary btn-sm" id="_add">add</button>
-                <form id="del_form" action="<?php echo site_url('material/del_material'); ?>" method="post" class="my_incline">
+                <form id="del_form" action="<?php echo site_url('mate/del_material'); ?>" method="post" class="my_incline">
                     <button type="button" class="btn btn-primary btn-sm" id="_delete">delete</button>
                 </form>
             </div>
@@ -42,7 +42,7 @@
     $(document).ready(function(){
         oTable = initTable();
         $("#_add").click(function () {
-            window.location.href = "<?php echo site_url('material/add_material'); ?>";
+            window.location.href = "<?php echo site_url('mate/add_material'); ?>";
         });
         $("#_delete").click(function () {
             //console.log(_delItem);
@@ -72,7 +72,7 @@
             console.log(td);
             alert("ok");
             return false;
-            window.location.href = "<?php echo site_url('material/add_material'); ?>";
+            window.location.href = "<?php echo site_url('mate/add_material'); ?>";
         });
     })
 
@@ -91,7 +91,7 @@
             // aLengthMenu:[5,10,20,50,-1],
             "aLengthMenu": [[10, 25, 50, -1], ["10", "25", "50", "All"]],
             "ajax": {
-                url: "<?php echo site_url('material/queryGet_material'); ?>",
+                url: "<?php echo site_url('mate/queryGet_material'); ?>",
                 type : "POST",
                 dataSrc : "data",
             },
@@ -107,7 +107,7 @@
                 { "mDataProp" : "price"},
                 { "mDataProp" : "num"},
                 { "mDataProp" : "unique_code","mRender": function ( dat, type, full ) {
-                        return '<a href="http://www.liu-gan.top/xiaoguo/material/index.php/Material/upd_material/'+dat+'" class="my_link"><button type="button" class="btn btn-primary btn-sm">update</button></a>';
+                        return '<a href="http://www.liu-gan.top/xiaoguo/material/index.php/mate/upd_material/'+dat+'" class="my_link"><button type="button" class="btn btn-primary btn-sm">update</button></a>';
                     }},
             ],
             select:true,
