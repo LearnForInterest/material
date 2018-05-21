@@ -5,6 +5,9 @@
     <div class="panel-heading">
         <div class="panel-title">
             Order OverAll View
+            <div class="my_right">
+                <button type="button" class="btn btn-primary btn-sm" id="_add">add</button>
+            </div>
         </div>
 
     </div>
@@ -31,6 +34,9 @@
 <script type="text/javascript" >
     $(document).ready(function(){
         oTable = initTable();
+        $("#_add").click(function () {
+            window.location.href = "<?php echo site_url('order/add_order'); ?>";
+        });
     })
 
     function initTable() {

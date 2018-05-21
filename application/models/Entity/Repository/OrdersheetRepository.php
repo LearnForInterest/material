@@ -10,4 +10,15 @@ namespace Entity\Repository;
  */
 class OrdersheetRepository extends \Doctrine\ORM\EntityRepository
 {
+    /**
+     * 统计要插入的新id
+     * @return string
+     */
+    public function getnewID()
+    {
+        return $this->_em->createQueryBuilder()
+                         ->select("max(o.orderId)+1 as new_oid")
+                         ->from('Entity\Ordersheet','o')
+                         ->getQuery()->getSingleScalarResult();
+    }
 }

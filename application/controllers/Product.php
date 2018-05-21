@@ -11,6 +11,8 @@ class Product extends MY_Controller {
         $this->productRepository  = $this->em->getRepository('Entity\Product');
         $this->materialRepository = $this->em->getRepository('Entity\Material');
         $this->relationRepository = $this->em->getRepository('Entity\Relation');
+        // unit test switch
+        $this->unit->active(TRUE);
     }
 
     public function query()
@@ -47,6 +49,7 @@ class Product extends MY_Controller {
             $this->load->view("public/error",$data);
         }else{
             $date['material'] = $this->input->post('material');
+
             $data['minus_materialInStockbackinfo'] = isset($date['material']) ? $this->materialRepository->minusMaterialInStock($date['material']) : '1';
 
             if($data['minus_materialInStockbackinfo'] === -1){
@@ -81,6 +84,28 @@ class Product extends MY_Controller {
     private function Chkdata(){
         $this->form_validation->set_rules('customer','customer','max_length[200]');
         $this->form_validation->set_rules('des','des','max_length[200]');
+    }
+
+    public function unittestMate(){
+        $date['material'] = array('1','2','4');
+        $test = $this->materialRepository->minusMaterialInStock($date['material']);
+        $expected_result = '1';
+        $test_name = 'minusMaterialInStock';
+        echo $this->unit->run($test, $expected_result, $test_name);
+
+        $date['material'] = array('1','3','4');
+        $test = $this->materialRepository->minusMaterialInStock($date['material']);
+        $expected_result = '-1';
+        $test_name = 'minusMaterialInStock';
+        echo $this->unit->run($test, $expected_result, $test_name);
+    }
+
+    public function unittestTotalprice(){
+        $date['material'] = array('1','2','4');
+        $test = $this->materialRepository->getTotalPrice($date['material']);
+        $expected_result = '10210';
+        $test_name = 'getTotalPrice';
+        echo $this->unit->run($test, $expected_result, $test_name);
     }
 }
 

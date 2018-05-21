@@ -44,13 +44,13 @@ class MaterialRepository extends \Doctrine\ORM\EntityRepository
         if(!$chkResult){
             return -1;
         }
-                $this->_em->createQueryBuilder()
-                          ->update('Entity\Material', 'm')
-                          ->set('m.materialNum','m.materialNum-1')
-                          ->where('m.materialId IN(:needIDs)')
-                          ->setParameter( 'needIDs', array_values($argv) )
-                          ->getQuery()
-                          ->execute();
+        $this->_em->createQueryBuilder()
+                  ->update('Entity\Material', 'm')
+                  ->set('m.materialNum','m.materialNum-1')
+                  ->where('m.materialId IN(:needIDs)')
+                  ->setParameter( 'needIDs', array_values($argv) )
+                  ->getQuery()
+                  ->execute();
         return 1;
     }
 

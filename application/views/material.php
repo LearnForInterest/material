@@ -102,8 +102,8 @@
 
                 }},
                 { "mDataProp" : "unique_code",'sClass':'center'},
-                { "mDataProp" : "des"},
                 { "mDataProp" : "name"},
+                { "mDataProp" : "des"},
                 { "mDataProp" : "price"},
                 { "mDataProp" : "num"},
                 { "mDataProp" : "unique_code","mRender": function ( dat, type, full ) {

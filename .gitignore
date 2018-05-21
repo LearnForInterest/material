@@ -1,0 +1,7 @@
+/application/third_party/
+/style/
+/application/config/database.php
+/application/controllers/Channel.php
+/application/models/Entity/Channel.php
+/application/models/Entity/Channel.php~
+/application/models/Entity/Repository/ChannelRepository.php
