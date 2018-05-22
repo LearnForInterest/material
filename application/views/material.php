@@ -69,8 +69,8 @@
         });
         $(".my_upd").click(function () {
             var td = $(this);
-            console.log(td);
-            alert("ok");
+            //console.log(td);
+            //alert("ok");
             return false;
             window.location.href = "<?php echo site_url('mate/add_material'); ?>";
         });
@@ -85,6 +85,7 @@
             "bSort": true,
             "bInfo": true,
             "bAutoWidth": true,
+            responsive : true,
             // "retrieve": true,
             "destroy":true,
             // "bAutoWidth": true,
@@ -112,23 +113,6 @@
             ],
             select:true,
             buttons: [{
-                'extend':'excel',
-                'text': 'excel',
-                'title': 'material',
-                'className': 'btn',
-                'exportOptions':{
-                    'format': {
-                        body: function ( data, row, column, node ) {
-                            if (!isNaN(data)) {
-                                data = "\u200C" + data ;
-                                return data;
-                            }else{
-                                return data;
-                            }
-                        }
-                    }
-                }
-            },{
                 'extend':'copy',
                 'text': 'copy',
                 'title': 'material',
@@ -137,7 +121,5 @@
         });
         return table;
     }
-
-
 
 </script>

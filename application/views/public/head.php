@@ -21,8 +21,10 @@
     <script src="<?php echo base_url('style/lib/bootstrap/js/bootstrap.min.js'); ?>"></script>
     <script src="<?php echo base_url('style/lib/jquery.dataTables.js'); ?>" type="text/javascript"></script>
     <script src="<?php echo base_url('style/lib/dataTables.bootstrap.js'); ?>" type="text/javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js" type="text/javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url('style/button/js/buttons.print.min.js'); ?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('style/button/js/buttons.html5.min.js'); ?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('style/button/dataTables.buttons.min.js'); ?>" type="text/javascript"></script>
+    <script src="<?php echo base_url('style/button/buttons.flash.js'); ?>" type="text/javascript"></script>
 
     <script src="<?php echo base_url('style/button/js/dataTables.buttons.min.js'); ?>" type="text/javascript"></script>
     <script src="<?php echo base_url('style/button/js/buttons.flash.js'); ?>" type="text/javascript"></script>
@@ -66,21 +68,12 @@
         }
     </script>
 
-
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="lib/html5.js"></script>
     <![endif]-->
 
-
 </head>
-
-<!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
-<!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
-<!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
-<!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<!--<![endif]-->
 
     <div class="sidebar-nav">
         <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>Menu</a>
@@ -92,7 +85,7 @@
         </ul>
 
     </div>
-    <title>MaterialManagementSystem</title>
+    <title>MaterialManageSystem</title>
 
 
 

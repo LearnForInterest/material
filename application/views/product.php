@@ -68,23 +68,6 @@
             ],
             select:true,
             buttons: [{
-                'extend':'excel',
-                'text': 'excel',
-                'title': 'material',
-                'className': 'btn',
-                'exportOptions':{
-                    'format': {
-                        body: function ( data, row, column, node ) {
-                            if (!isNaN(data)) {
-                                data = "\u200C" + data ;
-                                return data;
-                            }else{
-                                return data;
-                            }
-                        }
-                    }
-                }
-            },{
                 'extend':'copy',
                 'text': 'copy',
                 'title': 'material',
